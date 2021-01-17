@@ -7,9 +7,9 @@ Clone this repository using `git clone` and open it up in the [PlatformIO IDE](h
 
 Edit `include/hardware_config.h` if your pin layout differs.
 
-### Exporting the Images
+### Compiling the Images
 
-Use GIMP to export the `xcf` image files into `xdm` files.
+Use GIMP to export the `xcf` image files into `xdm` files. Make sure to declare the buffers as `PROGMEM`.
 
 ### Compiling the Font
 
