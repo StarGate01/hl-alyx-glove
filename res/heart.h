@@ -1,4 +1,4 @@
-byte heart[4][8] = 
+static const byte heart[4][8] = 
 {
     {
         B01100110,
