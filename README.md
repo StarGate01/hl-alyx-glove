@@ -1,5 +1,5 @@
-# Half-Life: Alyx Glove Firmware
-Firmware for a [Half-Life: Alyx](https://store.steampowered.com/app/546560/HalfLife_Alyx/) inspired glove cosplay prop. Based around an Arduino.
+# Half-Life: Alyx Glove - Firmware and Hardware
+Firmware and Hardware for a [Half-Life: Alyx](https://store.steampowered.com/app/546560/HalfLife_Alyx/) inspired glove cosplay prop. Based around an Arduino.
 
 ## Setup
 
@@ -29,3 +29,8 @@ Change into the `res` directory of this repository. Then run `./font.sh` to pre-
    - [wayoda/LedControl](https://platformio.org/lib/show/914/LedControl)
  - 128x64 1.3 inch OLED using hardware I2C
    - [olikraus/U8g2](https://platformio.org/lib/show/942/U8g2)
+
+
+## Schematics and PCB layout
+
+A [KiCad](https://kicad.org/) project is available in the `hardware` directory. It requires my [custom components](https://github.com/StarGate01/KiCadLibs).

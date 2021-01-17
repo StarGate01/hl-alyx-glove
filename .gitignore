@@ -4,3 +4,6 @@
 .vscode/launch.json
 .vscode/ipch
 *~
+_autosave*
+*-cache*
+*-bak
