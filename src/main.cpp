@@ -23,7 +23,7 @@ void setup()
 
     // LCD
     u8g2.begin();
-    u8g2.setFont(u8g_font_unifont);
+    u8g2.setFont(hl_alyx);
 }
 
 int s, i;
