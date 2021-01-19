@@ -9,7 +9,7 @@
 
 
 // Display drivers
-LedControl lc(LED_DIN, LED_CLK, LED0_CS, 1);
+LedControl lc(LED_DIN, LED_CLK, LED0_CS, 3);
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0); 
 
 // Heart animation frame indices
@@ -21,19 +21,23 @@ unsigned short resin = 0;
 
 // Core logic
 
+int s, i, k;
+
 void setup() 
 {
     // LEDs
-    lc.shutdown(0, false);
-    lc.setIntensity(0, 7);
-    lc.clearDisplay(0);
+    for(i=0; i<3; i++)
+    {
+        lc.shutdown(i, false);
+        lc.setIntensity(i, 7);
+        lc.clearDisplay(i);
+    }
 
     // LCD
     u8g2.begin();
     u8g2.setFont(hl_alyx);
 }
 
-int s, i;
 void loop() 
 {
     // Draw LCD image
@@ -47,7 +51,7 @@ void loop()
     // Render heart animation
     for(s=0; s<6; s++)
     {
-        for(i=0; i<8; i++) lc.setRow(0, i, heart[indices[s]][i]);
+        for(i=0; i<3; i++) for(k=0; k<8; k++) lc.setRow(i, k, heart[indices[(s + i) % 6]][k]);
         delay(100);
     }
 

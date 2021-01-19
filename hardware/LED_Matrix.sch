@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "8x8 LED Matrix Driver"
+Date "2021-01-19"
+Rev "1"
+Comp "CHRZ Engineering"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -283,10 +283,13 @@ CLK
 Text HLabel 5300 3750 0    50   Input ~ 0
 DIN
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR05
 U 1 1 602154C0
 P 5700 1900
-F 0 "#PWR?" H 5700 1750 50  0001 C CNN
+AR Path="/6013522B/602154C0" Ref="#PWR05"  Part="1" 
+AR Path="/601389C9/602154C0" Ref="#PWR06"  Part="1" 
+AR Path="/601389F6/602154C0" Ref="#PWR07"  Part="1" 
+F 0 "#PWR05" H 5700 1750 50  0001 C CNN
 F 1 "+3.3V" H 5715 2073 50  0000 C CNN
 F 2 "" H 5700 1900 50  0001 C CNN
 F 3 "" H 5700 1900 50  0001 C CNN
@@ -299,11 +302,11 @@ Wire Wire Line
 	5700 1900 4800 1900
 Wire Wire Line
 	4800 1900 4800 2150
+Connection ~ 5700 1900
 Wire Bus Line
 	6350 4350 6350 5500
 Wire Bus Line
 	5150 4350 5150 5300
 Wire Bus Line
 	6350 2250 6350 4350
-Connection ~ 5700 1900
 $EndSCHEMATC
