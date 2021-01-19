@@ -280,7 +280,6 @@ Wire Wire Line
 	5100 2450 5150 2450
 NoConn ~ 4100 4550
 NoConn ~ 4100 4450
-NoConn ~ 4100 4350
 NoConn ~ 4100 4150
 NoConn ~ 4100 3650
 NoConn ~ 4100 3550
@@ -370,10 +369,6 @@ Wire Wire Line
 NoConn ~ 4100 4750
 NoConn ~ 4100 4650
 Wire Wire Line
-	4100 4250 4200 4250
-Wire Wire Line
-	4200 4250 4200 5300
-Wire Wire Line
 	4200 5300 4900 5300
 Wire Wire Line
 	5100 2550 4100 2550
@@ -406,4 +401,9 @@ Wire Wire Line
 	6200 1950 6400 1950
 Wire Wire Line
 	6200 1850 6400 1850
+Wire Wire Line
+	4200 5300 4200 4350
+Wire Wire Line
+	4200 4350 4100 4350
+NoConn ~ 4100 4250
 $EndSCHEMATC
