@@ -77,7 +77,7 @@ The main controller is a ATMega328p, the same as the Arduino Uno uses. These ICs
 
 The 1.9mm LED matrices are a special part, because they are the "mini" version of the much more widely used 3.0mm/3.75mm 8x8 LED matrices. I bought them from [AliExpress](https://de.aliexpress.com/item/4000931195417.html). The OLED is a fairly standard "Arduino-type" breakout board, and commonly available in blue, yellow and white. [Amazon](https://www.amazon.com/gp/product/B07D9G11DZ) carries them, and so does [AliExpress](https://de.aliexpress.com/item/1005001355009919.html). 
 
-The surface mount LED is a 5050 SMD LED, which is also commonly used in LED strips and can be found at many stores, for example at [Ebay](https://www.ebay.com/itm/LED-Light-SMD-SMT-0603-0805-1206-7030-3020-5730-5050-3528-335-Super-bright/302940504403).
+The surface mount LED is a 5050 SMT LED, which is also commonly used in LED strips and can be found at many stores, for example at [Ebay](https://www.ebay.com/itm/LED-Light-SMD-SMT-0603-0805-1206-7030-3020-5730-5050-3528-335-Super-bright/302940504403).
 
 The display drivers are MAX7219CWG ICs, available at many stores, for example [Ebay](https://www.ebay.com/itm/10-St%C3%BCcke-Maxim-MAX7219CWG-SOP-24-Led-Display-Driver-New-Ic-ln/332191432560). However, prices differ a lot depending on the retailer.
 
