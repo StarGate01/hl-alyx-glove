@@ -22,6 +22,8 @@ Firmware and Hardware for a [Half-Life: Alyx](https://store.steampowered.com/app
  - [ ] Optimize VCC trace
  - [ ] Move OLED connector
  - [ ] Optimize board size
+ - [ ] Think about inertial measurement unit
+ - [ ] Drive decorative yellow LEDs
 
 ### Step 2: Power System
 
