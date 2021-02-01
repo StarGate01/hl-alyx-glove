@@ -25,6 +25,7 @@ Firmware and Hardware for a [Half-Life: Alyx](https://store.steampowered.com/app
  - [ ] Think about inertial measurement unit
  - [ ] Drive decorative yellow LEDs
  - [ ] Improve ground plane stiching
+ - [ ] Add component orientation to  silkscreen
 
 ### Step 2: Power System
 
