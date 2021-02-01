@@ -67,10 +67,6 @@ Change into the `res` directory of this repository. Then run `./font.sh` to pre-
 
 ## Electronics
 
-The actual gloves are called "Half-Jab" by the company Highway 21. Available at motorcycle shops or Amazon/Ebay.
-
-### Sourcing Components
-
 Most parts are pretty standard, eg. THT resistors, capacitors and LEDs. Pretty much any electronics store should carry them.
 
 The main controller is a ATMega328p, the same as the Arduino Uno uses. These ICs are cheap for what they offer and also available pretty much everywhere.
@@ -92,6 +88,8 @@ Solder the components to the PCB acording to the KiCAD schematics. Pay extra att
 To attach the OLED module to the main PCB, you might have to shorten the pinheaders a bit using a file. The mounting holes should be on top of each other, such that the modules can be screwed together using an M3 bolt.
 
 ## Putting the Glove Together
+
+The actual gloves are called "Half-Jab" by the company Highway 21. Available at motorcycle shops or Amazon/Ebay.
 
 TODO
 
