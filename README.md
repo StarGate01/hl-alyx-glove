@@ -21,6 +21,7 @@ Firmware and Hardware for a [Half-Life: Alyx](https://store.steampowered.com/app
  - [ ] Connect mounting holes to ground
  - [ ] Optimize VCC trace
  - [ ] Move OLED connector
+ - [ ] Optimize board size
 
 ### Step 2: Power System
 
