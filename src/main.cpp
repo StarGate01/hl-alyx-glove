@@ -9,11 +9,8 @@
 
 
 // Display drivers
-LedControl lc(LED_DIN, LED_CLK, LED0_CS, 3);
+LedControl lc(LED_DIN, LED_CLK, LED0_CS, 2);
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0);
-#define LED1 7
-#define LED2 8
-#define LED3 2
 
 // Heart animation frame indices
 int indices[6] = { 0, 1, 2, 3, 2, 1 };
@@ -29,12 +26,6 @@ int s, i, k;
 void setup() 
 {
     // LEDs
-    for(i=0; i<3; i++)
-    {
-        lc.shutdown(i, false);
-        lc.setIntensity(i, 7);
-        lc.clearDisplay(i);
-    }
     pinMode(LED1, OUTPUT);
     pinMode(LED2, OUTPUT);
     pinMode(LED3, OUTPUT);
@@ -42,6 +33,15 @@ void setup()
     // LCD
     u8g2.begin();
     u8g2.setFont(hl_alyx);
+
+    // Matrices
+    delay(500);
+    for(i=0; i<3; i++)
+    {
+        lc.shutdown(i, false);
+        lc.setIntensity(i, 4);
+        lc.clearDisplay(i);
+    }
 }
 
 void loop() 
