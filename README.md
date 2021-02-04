@@ -53,7 +53,7 @@ Clone this repository using `git clone` and open it up in the [PlatformIO IDE](h
 
 Edit `include/hardware_config.h` if your pin layout differs.
 
-Finally, use PlatformIO to compile and upload the program. A debug configuration for the Arduino Uno (`uno`) and a release configuration for the PCB (`barebone`) are available. To program the barebones chip, you need a ISP programmer such as a AVRISP, USBasp or Arduino as ISP.
+Finally, use PlatformIO to compile and upload the program. A debug configuration for the Arduino Uno (`uno`) and a release configuration for the PCB (`barebone`) are available. To program the barebone chip, you need a ISP programmer such as a AVRISP, USBasp or Arduino as ISP.
 
 ### Compiling Modified Sprites
 
@@ -77,6 +77,8 @@ Change into the `res` directory of this repository. Then run `./font.sh` to pre-
    - [wayoda/LedControl](https://platformio.org/lib/show/914/LedControl)
  - 128x64 1.3 inch OLED using hardware I2C
    - [olikraus/U8g2](https://platformio.org/lib/show/942/U8g2)
+ - GY-61 ADXL335 Breakout
+   - Analog input
 
 ## Electronics
 
@@ -90,15 +92,17 @@ The surface mount LED is a 5050 SMT LED, which is also commonly used in LED stri
 
 The display drivers are MAX7219CWG ICs, available at many stores, for example [Ebay](https://www.ebay.com/itm/10-St%C3%BCcke-Maxim-MAX7219CWG-SOP-24-Led-Display-Driver-New-Ic-ln/332191432560). However, prices differ a lot depending on the retailer.
 
+The Acceleration sensor is an ADXL335 IC on the GY-61 "Arduino-type" breakout PCB. These modules are so cheap that it is not worth the trouble of including components that can't be hand-soldered. These modules are available at Amazon/Ebay and other retailers.
+
 ### Fabricating the PCB
 
 A [KiCad](https://kicad.org/) project is available in the `hardware` directory. It requires my [custom components](https://github.com/StarGate01/KiCadLibs).
 
-Fabricate the PCB according to the Gerber files in `hardware/gerber` or send them to a factory. I had mine produced by [JLCPCB](https://jlcpcb.com/).
+Fabricate the PCB according to the Gerber files in `hardware/gerber` or send them to a factory. I had mine produced by [JLCPCB](https://jlcpcb.com/). All SMD components are hand-solderable using a fine tip and a steady hand.
 
-Solder the components to the PCB acording to the KiCAD schematics. Pay extra attention to the orientation of the LED displays and the display drivers ICs. Sometimes the orientation of the LED matrices is not obvious, so just put them into the holes without soldering and tilt them to jam them, in order to make electrical contact. Then you can verify the orientation if they display correctly.
+Solder the components to the PCB according to the KiCAD schematics. Pay extra attention to the orientation of the LED displays and the display drivers ICs, check the little circle markers on the PCB. Sometimes the orientation of the LED matrices is not obvious, so just put them into the holes without soldering and tilt them to jam them, in order to make electrical contact. Then you can verify the orientation if they display correctly.
 
-To attach the OLED module to the main PCB, you might have to shorten the pinheaders a bit using a file. The mounting holes should be on top of each other, such that the modules can be screwed together using an M3 bolt.
+The mounting holes of the PCB and the OLED module should be on top of each other, such that the modules can be screwed together using an M3 bolt. The acceleration module can be soldered onto the PCB.
 
 ## Putting the Glove Together
 
