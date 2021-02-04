@@ -14,20 +14,26 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
  - [x] Drive check engine LED
  - [x] Evaluate barebone IC
  - [x] Evaluate display drivers
+ - [x] Manufacture board
+ - [x] Validate board
  
 **Revision 2: Refinement** - Design phase
- - [ ] Add buttons
- - [ ] Add 0.1uF caps to driver ICs
- - [ ] Larger power traces
- - [ ] Re-think trace width in general
- - [ ] Connect mounting holes to ground
- - [ ] Optimize VCC trace
- - [ ] Move OLED connector
- - [ ] Optimize board size
- - [ ] Think about inertial measurement unit
- - [ ] Drive decorative yellow LEDs
- - [ ] Improve ground plane stiching
- - [ ] Add component orientation to  silkscreen
+ - [x] Add buttons
+ - [x] Add 0.1uF caps to driver ICs
+ - [x] Larger power traces
+ - [x] Re-think trace width in general
+ - [x] Properly lay out mounting holes
+ - [x] Optimize VCC trace
+ - [x] Move OLED connector
+ - [x] Optimize board size
+ - [x] Think about inertial measurement unit
+ - [x] Drive decorative yellow LEDs
+ - [x] Improve ground plane stitching
+ - [x] Add source info to silkscreen
+ - [x] Add component orientation to  silkscreen
+ - [ ] Evaluate acceleration sensor
+ - [ ] Manufacture board
+ - [ ] Validate board
 
 ### Step 2: Power System
 

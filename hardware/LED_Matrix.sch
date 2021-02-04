@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 3 4
 Title "8x8 LED Matrix Driver"
 Date "2021-01-19"
 Rev "1"
@@ -23,7 +23,7 @@ AR Path="/6013795C" Ref="U?"  Part="1"
 AR Path="/6013522B/6013795C" Ref="U1"  Part="1" 
 AR Path="/601389C9/6013795C" Ref="U2"  Part="1" 
 AR Path="/601389F6/6013795C" Ref="U3"  Part="1" 
-F 0 "U1" H 5950 4050 50  0000 C CNN
+F 0 "U2" H 5950 4050 50  0000 C CNN
 F 1 "MAX7219" H 5950 3950 50  0000 C CNN
 F 2 "Package_SO:SOP-24_7.5x15.4mm_P1.27mm" H 5650 3000 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf" H 5750 2800 50  0001 C CNN
@@ -38,7 +38,7 @@ AR Path="/60137962" Ref="R?"  Part="1"
 AR Path="/6013522B/60137962" Ref="R1"  Part="1" 
 AR Path="/601389C9/60137962" Ref="R2"  Part="1" 
 AR Path="/601389F6/60137962" Ref="R3"  Part="1" 
-F 0 "R1" V 4950 2150 50  0000 C CNN
+F 0 "R2" V 4950 2150 50  0000 C CNN
 F 1 "10K" V 5150 2150 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4980 2150 50  0001 C CNN
 F 3 "~" H 5050 2150 50  0001 C CNN
@@ -53,7 +53,7 @@ AR Path="/6013796E" Ref="#PWR?"  Part="1"
 AR Path="/6013522B/6013796E" Ref="#PWR0102"  Part="1" 
 AR Path="/601389C9/6013796E" Ref="#PWR0104"  Part="1" 
 AR Path="/601389F6/6013796E" Ref="#PWR0106"  Part="1" 
-F 0 "#PWR0102" H 5700 3800 50  0001 C CNN
+F 0 "#PWR0104" H 5700 3800 50  0001 C CNN
 F 1 "GND" H 5705 3877 50  0000 C CNN
 F 2 "" H 5700 4050 50  0001 C CNN
 F 3 "" H 5700 4050 50  0001 C CNN
@@ -196,7 +196,7 @@ AR Path="/601379B4" Ref="LED?"  Part="1"
 AR Path="/6013522B/601379B4" Ref="LED1"  Part="1" 
 AR Path="/601389C9/601379B4" Ref="LED2"  Part="1" 
 AR Path="/601389F6/601379B4" Ref="LED3"  Part="1" 
-F 0 "LED1" H 5750 5665 50  0000 C CNN
+F 0 "LED2" H 5750 5665 50  0000 C CNN
 F 1 "788BS" H 5750 5574 50  0000 C CNN
 F 2 "CustomComponents:788BS" H 5650 5050 50  0001 C CNN
 F 3 "datasheets/TOP-CA-788BS.pdf" H 5650 5050 50  0001 C CNN
@@ -208,7 +208,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 2150 4800 2150
 Wire Wire Line
-	5700 3950 5700 4050
+	5700 3950 5700 4000
 Text Label 5300 4700 0    50   ~ 0
 C4
 Text Label 5300 4800 0    50   ~ 0
@@ -282,27 +282,51 @@ Text HLabel 5300 3650 0    50   Input ~ 0
 CLK
 Text HLabel 5300 3750 0    50   Input ~ 0
 DIN
-$Comp
-L power:+3.3V #PWR05
-U 1 1 602154C0
-P 5700 1900
-AR Path="/6013522B/602154C0" Ref="#PWR05"  Part="1" 
-AR Path="/601389C9/602154C0" Ref="#PWR06"  Part="1" 
-AR Path="/601389F6/602154C0" Ref="#PWR07"  Part="1" 
-F 0 "#PWR05" H 5700 1750 50  0001 C CNN
-F 1 "+3.3V" H 5715 2073 50  0000 C CNN
-F 2 "" H 5700 1900 50  0001 C CNN
-F 3 "" H 5700 1900 50  0001 C CNN
-	1    5700 1900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5700 1950 5700 1900
 Wire Wire Line
 	5700 1900 4800 1900
 Wire Wire Line
 	4800 1900 4800 2150
+$Comp
+L power:VCC #PWR05
+U 1 1 6019AFA3
+P 5700 1900
+AR Path="/6013522B/6019AFA3" Ref="#PWR05"  Part="1" 
+AR Path="/601389C9/6019AFA3" Ref="#PWR06"  Part="1" 
+AR Path="/601389F6/6019AFA3" Ref="#PWR07"  Part="1" 
+F 0 "#PWR06" H 5700 1750 50  0001 C CNN
+F 1 "VCC" H 5715 2073 50  0000 C CNN
+F 2 "" H 5700 1900 50  0001 C CNN
+F 3 "" H 5700 1900 50  0001 C CNN
+	1    5700 1900
+	1    0    0    -1  
+$EndComp
 Connection ~ 5700 1900
+$Comp
+L Device:C C2
+U 1 1 6019BC1F
+P 4800 2500
+AR Path="/6013522B/6019BC1F" Ref="C2"  Part="1" 
+AR Path="/601389C9/6019BC1F" Ref="C3"  Part="1" 
+AR Path="/601389F6/6019BC1F" Ref="C4"  Part="1" 
+F 0 "C3" H 4915 2546 50  0000 L CNN
+F 1 "100N" H 4915 2455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4838 2350 50  0001 C CNN
+F 3 "~" H 4800 2500 50  0001 C CNN
+	1    4800 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2350 4800 2150
+Connection ~ 4800 2150
+Wire Wire Line
+	4800 2650 4800 4000
+Wire Wire Line
+	4800 4000 5700 4000
+Connection ~ 5700 4000
+Wire Wire Line
+	5700 4000 5700 4050
 Wire Bus Line
 	6350 4350 6350 5500
 Wire Bus Line
