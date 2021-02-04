@@ -441,7 +441,7 @@ U 1 1 602A0AE9
 P 4150 1600
 F 0 "SW2" H 4150 1885 50  0000 C CNN
 F 1 "SW_Push" H 4150 1794 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin" H 4150 1800 50  0001 C CNN
+F 2 "CustomComponents:smd_switch_sunrom4388" H 4150 1800 50  0001 C CNN
 F 3 "~" H 4150 1800 50  0001 C CNN
 	1    4150 1600
 	1    0    0    -1  
@@ -452,7 +452,7 @@ U 1 1 602A0FF9
 P 4150 1000
 F 0 "SW1" H 4150 1285 50  0000 C CNN
 F 1 "SW_Push" H 4150 1194 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin" H 4150 1200 50  0001 C CNN
+F 2 "CustomComponents:smd_switch_sunrom4388" H 4150 1200 50  0001 C CNN
 F 3 "~" H 4150 1200 50  0001 C CNN
 	1    4150 1000
 	1    0    0    -1  
