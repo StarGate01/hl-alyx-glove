@@ -212,12 +212,12 @@ $EndComp
 $Comp
 L Device:R R7
 U 1 1 6017F981
-P 6450 5300
-F 0 "R7" V 6650 5300 50  0000 C CNN
-F 1 "180" V 6550 5300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6380 5300 50  0001 C CNN
-F 3 "~" H 6450 5300 50  0001 C CNN
-	1    6450 5300
+P 6450 5400
+F 0 "R7" V 6500 5200 50  0000 C CNN
+F 1 "180" V 6500 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6380 5400 50  0001 C CNN
+F 3 "~" H 6450 5400 50  0001 C CNN
+	1    6450 5400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -274,16 +274,6 @@ $EndComp
 Wire Wire Line
 	6100 5200 7200 5200
 Connection ~ 6100 5200
-Wire Wire Line
-	6800 5800 6800 5600
-Connection ~ 6800 5600
-Wire Wire Line
-	6800 5600 6800 5400
-Wire Wire Line
-	6800 5400 6800 5300
-Wire Wire Line
-	6800 5300 6600 5300
-Connection ~ 6800 5400
 Wire Wire Line
 	7200 5800 7200 5600
 Connection ~ 7200 5600
@@ -379,8 +369,6 @@ Wire Wire Line
 Connection ~ 3700 1600
 Wire Wire Line
 	3700 1600 3700 2100
-Wire Wire Line
-	6300 5300 5550 5300
 Wire Wire Line
 	4100 4650 4600 4650
 Wire Wire Line
@@ -557,8 +545,6 @@ Wire Wire Line
 	4250 4350 4100 4350
 Wire Wire Line
 	4100 4450 5550 4450
-Wire Wire Line
-	5550 4450 5550 5300
 $Comp
 L Device:R R8
 U 1 1 6021DC6B
@@ -628,4 +614,46 @@ Wire Wire Line
 	5650 2900 5650 2950
 Wire Wire Line
 	5650 2950 4950 2950
+$Comp
+L Device:R R12
+U 1 1 60210EC6
+P 6450 5600
+F 0 "R12" V 6500 5400 50  0000 C CNN
+F 1 "180" V 6500 5800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6380 5600 50  0001 C CNN
+F 3 "~" H 6450 5600 50  0001 C CNN
+	1    6450 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 6021139F
+P 6450 5800
+F 0 "R13" V 6500 5600 50  0000 C CNN
+F 1 "180" V 6500 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6380 5800 50  0001 C CNN
+F 3 "~" H 6450 5800 50  0001 C CNN
+	1    6450 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5550 5400 6300 5400
+Wire Wire Line
+	5550 4450 5550 5400
+Wire Wire Line
+	6600 5400 6800 5400
+Wire Wire Line
+	6600 5600 6800 5600
+Wire Wire Line
+	6600 5800 6800 5800
+Wire Wire Line
+	5550 5400 5550 5600
+Wire Wire Line
+	5550 5800 6300 5800
+Connection ~ 5550 5400
+Connection ~ 5550 5600
+Wire Wire Line
+	5550 5600 5550 5800
+Wire Wire Line
+	5550 5600 6300 5600
 $EndSCHEMATC
