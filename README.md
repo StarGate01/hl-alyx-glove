@@ -17,7 +17,7 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
  - [x] Manufacture board
  - [x] Validate board
  
-**Revision 2: Refinement** - Design phase
+**Revision 2: Refinement** - Manufacturing phase
  - [x] Add buttons
  - [x] Add 0.1uF caps to driver ICs
  - [x] Larger power traces
@@ -31,7 +31,7 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
  - [x] Improve ground plane stitching
  - [x] Add source info to silkscreen
  - [x] Add component orientation to  silkscreen
- - [ ] Evaluate acceleration sensor
+ - [x] Evaluate acceleration sensor
  - [ ] Manufacture board
  - [ ] Validate board
 
@@ -42,7 +42,7 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 
 ### Step 3: CAD and 3D-Printing
 
- - [ ] Acquire gloves
+ - [x] Acquire gloves
  - [ ] Design decorative parts
  - [ ] Adapt parts to 3D-Printing
  - [ ] Think about paint and mounting
