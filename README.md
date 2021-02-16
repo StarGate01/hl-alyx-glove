@@ -5,47 +5,82 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 
 ## State of the Project
 
-### Step 1: Main PCB
+<details>
+  <summary>PCB Revision 1: Proof of concept - Completed</summary>
 
-**Revision 1: Proof of concept** - Completed
- - [x] OLED rendering of resin count and sprite
- - [x] Display animations on 3 LED matrices
- - [x] Drive 2 green status LEDs
- - [x] Drive check engine LED
- - [x] Evaluate barebone IC
- - [x] Evaluate display drivers
- - [x] Manufacture board
- - [x] Validate board
+  - [x] OLED rendering of resin count and sprite
+  - [x] Display animations on 3 LED matrices
+  - [x] Drive 2 green status LEDs
+  - [x] Drive check engine LED
+  - [x] Evaluate barebone IC
+  - [x] Evaluate display drivers
+  - [x] Manufacture board
+  - [x] Validate board
+
+</details>
  
-**Revision 2: Refinement** - Manufacturing phase
- - [x] Add buttons
- - [x] Add 0.1uF caps to driver ICs
- - [x] Larger power traces
- - [x] Re-think trace width in general
- - [x] Properly lay out mounting holes
- - [x] Optimize VCC trace
- - [x] Move OLED connector
- - [x] Optimize board size
- - [x] Think about inertial measurement unit
- - [x] Drive decorative yellow LEDs
- - [x] Improve ground plane stitching
- - [x] Add source info to silkscreen
- - [x] Add component orientation to  silkscreen
- - [x] Evaluate acceleration sensor
- - [ ] Manufacture board
- - [ ] Validate board
+<details>
+  <summary>PCB Revision 2: Refinement - Completed</summary>
 
-### Step 2: Power System
+  - [x] Add buttons
+  - [x] Add 0.1uF caps to driver ICs
+  - [x] Larger power traces
+  - [x] Re-think trace width in general
+  - [x] Properly lay out mounting holes
+  - [x] Optimize VCC trace
+  - [x] Move OLED connector
+  - [x] Optimize board size
+  - [x] Think about inertial measurement unit
+  - [x] Drive decorative yellow LEDs
+  - [x] Improve ground plane stitching
+  - [x] Add source info to silkscreen
+  - [x] Add component orientation to  silkscreen
+  - [x] Evaluate acceleration sensor
+  - [x] Manufacture board
+  - [x] Validate board
 
- - [ ] Battery selection
- - [ ] LiPo charging PCB
+</details>
 
-### Step 3: CAD and 3D-Printing
+<details>
+  <summary>Firmware Revision 1: Tests - Completed</summary>
 
- - [x] Acquire gloves
- - [ ] Design decorative parts
- - [ ] Adapt parts to 3D-Printing
- - [ ] Think about paint and mounting
+  - [x] Test sensor
+  - [x] Display resin count
+  - [x] Display blinking hearts
+  - [x] Flash LEDs
+  - [x] Read buttons
+
+</details>
+
+<details>
+  <summary>Firmware Revision 2: Proper functionality - In Progress</summary>
+
+  - [ ] Wrist flick detection
+  - [ ] State management w/ buttons
+  - [ ] Aux LED control
+  - [ ] Adjustable amount of hearts
+
+</details>
+
+<details>
+  <summary>Power System - Not Started</summary>
+
+  - [ ] Battery selection
+  - [ ] Charging management
+
+</details>
+
+<details>
+  <summary>CAD and 3D-Printing - In Progress</summary>
+
+  - [x] Acquire gloves
+  - [x] Export models from game
+  - [ ] Design decorative parts
+  - [ ] Adapt parts to 3D-Printing
+  - [ ] Think about paint and mounting
+
+</details>
+
 
 ## Software
 

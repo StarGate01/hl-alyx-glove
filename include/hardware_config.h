@@ -8,7 +8,7 @@
 
 // LEDs
 #define LED_CE 3
-#define LED_EX 4
+#define LED_EX 2
 #define LED_S1 7
 #define LED_S2 8
 
