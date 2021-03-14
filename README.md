@@ -57,16 +57,17 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 
   - [ ] Wrist flick detection
   - [ ] State management w/ buttons
-  - [ ] Aux LED control
+  - [x] Aux LED control
   - [ ] Adjustable amount of hearts
 
 </details>
 
 <details>
-  <summary>Power System - Not Started</summary>
+  <summary>Power System - In Progress</summary>
 
-  - [ ] Battery selection
-  - [ ] Charging management
+  - [x] Battery selection
+  - [x] Charging management
+  - [ ] Verify power system
 
 </details>
 
@@ -75,12 +76,22 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 
   - [x] Acquire gloves
   - [x] Export models from game
-  - [ ] Design decorative parts
-  - [ ] Adapt parts to 3D-Printing
-  - [ ] Think about paint and mounting
+  - [x] Design decorative parts
+  - [x] Adapt decorative parts to 3D-Printing
+  - [x] Think about paint and mounting
+  - [ ] Design battery holder
+  - [ ] Design PCB mount
 
 </details>
 
+<details>
+  <summary>Final Assembly - Planning</summary>
+
+  - [ ] Proper paintjob
+  - [ ] Kitbash copper elements and wires
+  - [ ] LED mounting
+
+</details>
 
 ## Software
 
@@ -143,9 +154,10 @@ The mounting holes of the PCB and the OLED module should be on top of each other
 
 The actual gloves are called "Half-Jab" by the company Highway 21. Available at motorcycle shops or Amazon/Ebay.
 
-TODO
+The directory `models` contains STL files for 3D printing. Please note that quite a lot of manual finishing is required depending on your printer.
 
- - 3D-Printing
+TODO describe:
+
  - Print Check Engine Light
  - Paint
- - Assemble
+ - Assembly
