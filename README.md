@@ -63,11 +63,11 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 </details>
 
 <details>
-  <summary>Power System - In Progress</summary>
+  <summary>Power System - Completed</summary>
 
   - [x] Battery selection
   - [x] Charging management
-  - [ ] Verify power system
+  - [x] Verify power system
 
 </details>
 
@@ -79,7 +79,7 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
   - [x] Design decorative parts
   - [x] Adapt decorative parts to 3D-Printing
   - [x] Think about paint and mounting
-  - [ ] Design battery holder
+  - [x] Design battery holder
   - [ ] Design PCB mount
 
 </details>
@@ -139,6 +139,8 @@ The surface mount LED is a 5050 SMT LED, which is also commonly used in LED stri
 The display drivers are MAX7219CWG ICs, available at many stores, for example [Ebay](https://www.ebay.com/itm/10-St%C3%BCcke-Maxim-MAX7219CWG-SOP-24-Led-Display-Driver-New-Ic-ln/332191432560). However, prices differ a lot depending on the retailer.
 
 The Acceleration sensor is an ADXL335 IC on the GY-61 "Arduino-type" breakout PCB. These modules are so cheap that it is not worth the trouble of including components that can't be hand-soldered. These modules are available at Amazon/Ebay and other retailers.
+
+The power system consists of a 3.7V LiPo Battery commonly used for drones and RC toys (available from e.g. [Ebay](https://www.ebay.com/itm/151372678869)), and an integrated charger/converter board, which is for example available at [Amazon](https://www.amazon.de/gp/product/B07QHTK791). For interfacing, a micro USB socket is used.
 
 ### Fabricating the PCB
 
