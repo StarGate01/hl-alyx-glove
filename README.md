@@ -163,4 +163,4 @@ Refer to the photos to see how I assembled my version. I used silver metallic au
 
 The "Check engine light" is a 3D printed frame with a piece of printed overhead foil. The frame then gets half-filled with semi-transparent hot glue to create a light diffusor. Print the document `models/check_engine.pdf` on overhead projection foil using a laser/toner printer and cut out one image to size. Insert the foil piece into the frame from the back, such that it rests on the small lip. Make sure the toner side faces inwards, such that it is not exposed to the outside. Then pour in some epoxy or hot glue, but make sure to not fill it up completely. Then position the lamp cover on the PCB where the frame is printed on. I attached it with some small drops of hot glue.
 
-I used various M3 bolts and nuts, and some epoxy glue for the rest of the assembly.
+I used various M3 bolts and nuts, and some epoxy glue for the rest of the assembly. The whole assembly is attached to the glove without modifying the glove, instead relying on the two plastic hooks.
