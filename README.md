@@ -1,7 +1,23 @@
-# Half-Life: Alyx Glove
+# Half-Life: Alyx Gravity Glove Replica
 Firmware, Hardware and Models for a [Half-Life: Alyx](https://store.steampowered.com/app/546560/HalfLife_Alyx/) inspired glove cosplay prop. Based around an ATMega328p / Arduino Uno.
 
 Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/images)!
+
+## Features
+
+ - Detailed replica of the secondary-hand glove
+   - Based on in-game 3D models
+ - Custom printed circuit board
+   - Small and compact due to SMD design
+   - Three red LED matrices for hearts
+   - Two individually controllable green status LEDs
+   - Two orange finger attractor LEDs
+   - Blue 128x64 pixel OLED screen for resin count
+   - Red check engine LED light 
+   - Moveable attractor fingers
+ - Uses standard components for power source and control
+ - Microcontroller can be easily reprogrammed
+ - Cosmetic parts are printable on any standard 3D printer
 
 ## State of the Project
 
@@ -169,4 +185,4 @@ I used various M3 bolts and nuts, and some epoxy glue for the rest of the assemb
 
 ## Licensing
 
-All files in this reposity are released under the terms of the MIT license. However the original idea and in-game design of the Half-Life: Alyx Glove was made by Valve Software. The copyright of the in-game design is of course held by Valve Software. The files in this reposity however are a derivative / transformative work made by the author, and their copyright remains with the author.
+All files in this repository are released under the terms of the MIT license. However the original idea and in-game design of the Half-Life: Alyx Glove was made by Valve Software. The copyright of the in-game design is of course held by Valve Software. The files in this repository however are a derivative / transformative work made by the author, and their copyright remains with the author.
