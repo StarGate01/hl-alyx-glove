@@ -1,5 +1,5 @@
-# Half-Life: Alyx Glove - Firmware and Hardware
-Firmware and Hardware for a [Half-Life: Alyx](https://store.steampowered.com/app/546560/HalfLife_Alyx/) inspired glove cosplay prop. Based around an ATMega328p / Arduino Uno.
+# Half-Life: Alyx Glove
+Firmware, Hardware and Models for a [Half-Life: Alyx](https://store.steampowered.com/app/546560/HalfLife_Alyx/) inspired glove cosplay prop. Based around an ATMega328p / Arduino Uno.
 
 Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/images)!
 
