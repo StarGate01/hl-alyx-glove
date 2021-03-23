@@ -157,10 +157,10 @@ The mounting holes of the PCB and the OLED module should be on top of each other
 
 The actual gloves are called "Half-Jab" by the company Highway 21. Available at motorcycle shops or Amazon/Ebay.
 
-The directory `models` contains STL files for 3D printing. Please note that quite a lot of manual finishing is required depending on your printer.
+The directory `models` contains STL files for 3D printing. Please note that quite a lot of manual finishing is required depending on your printer. Print all the files in black plastic (I used PLA). The parts are not plug-and-play, you have to sand, cut and drill at various places. Use the parts as a starting point for your own creativity.
 
-TODO describe:
+Refer to the photos to see how I assembled my version. I used silver metallic automotive sparypaint to color the base piece. The rest was painted using acrylic colors and a paintbrush.
 
- - Print Check Engine Light
- - Paint
- - Assembly
+The "Check engine light" is a 3D printed frame with a piece of printed overhead foil. The frame then gets half-filled with semi-transparent hot glue to create a light diffusor. Print the document `models/check_engine.pdf` on overhead projection foil using a laser/toner printer and cut out one image to size. Insert the foil piece into the frame from the back, such that it rests on the small lip. Make sure the toner side faces inwards, such that it is not exposed to the outside. Then pour in some epoxy or hot glue, but make sure to not fill it up completely. Then position the lamp cover on the PCB where the frame is printed on. I attached it with some small drops of hot glue.
+
+I used various M3 bolts and nuts, and some epoxy glue for the rest of the assembly.
