@@ -72,7 +72,7 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 </details>
 
 <details>
-  <summary>CAD and 3D-Printing - In Progress</summary>
+  <summary>CAD and 3D-Printing - Completed</summary>
 
   - [x] Acquire gloves
   - [x] Export models from game
@@ -80,7 +80,8 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
   - [x] Adapt decorative parts to 3D-Printing
   - [x] Think about paint and mounting
   - [x] Design battery holder
-  - [ ] Design PCB mount
+  - [x] Design PCB mount
+  - [x] Mount to glove
 
 </details>
 
