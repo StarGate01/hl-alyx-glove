@@ -86,10 +86,10 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 </details>
 
 <details>
-  <summary>Final Assembly - In Progress</summary>
+  <summary>Final Assembly - Completed</summary>
 
-  - [ ] Proper paintjob
-  - [ ] Kitbash copper elements and wires
+  - [x] Proper paintjob
+  - [x] Paint copper elements and add wires
   - [x] LED mounting
 
 </details>
@@ -159,7 +159,7 @@ The actual gloves are called "Half-Jab" by the company Highway 21. Available at 
 
 The directory `models` contains STL files for 3D printing. Please note that quite a lot of manual finishing is required depending on your printer. Print all the files in black plastic (I used PLA). The parts are not plug-and-play, you have to sand, cut and drill at various places. Use the parts as a starting point for your own creativity.
 
-Refer to the photos to see how I assembled my version. I used silver metallic automotive sparypaint to color the base piece. The rest was painted using acrylic colors and a paintbrush.
+Refer to the photos to see how I assembled my version. I used silver metallic automotive sparypaint to color the base piece, and special copper colored paint to paint the copper elements. The rest was painted using acrylic colors.
 
 The attractor LEDs are standard orange LEDs that were inserted into the tips of the finger pieces from above. Their power cables have been routed through a hole in the plastic and back to the PCB.
 
