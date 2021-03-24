@@ -1,7 +1,9 @@
 # Half-Life: Alyx Gravity Glove Replica
 Firmware, Hardware and Models for a [Half-Life: Alyx](https://store.steampowered.com/app/546560/HalfLife_Alyx/) inspired glove cosplay prop. Based around an ATMega328p / Arduino Uno.
 
-Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/images)!
+![](https://github.com/StarGate01/hl-alyx-glove/blob/master/images/alyx_lit_full.jpg)
+
+Also check out the [other images](https://github.com/StarGate01/hl-alyx-glove/tree/master/images)!
 
 ## Features
 
