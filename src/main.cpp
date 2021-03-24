@@ -12,44 +12,17 @@
 #define FRAME_TIME 100
 #define LEDMAT_NUM 3
 #define LEDMAT_BRIGHTNESS 4
-#define SENSOR_SAMPLES 8
+#define HEARTS_FRAMES 4
 
 // Display drivers
 LedControl lc(LED_DIN, LED_CLK, LED_CS, LEDMAT_NUM);
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0);
 
-// Sensor configuration
-const int sensor_idx[] { ACC_X, ACC_Y, ACC_Z };
-const int sensor_min[] = { 280, 280, 350 };
-const int sensor_max[] = { 425, 425, 425 };
-
-// Heart animation frame indices
-#define HEART_ANIM_SIZE 6
-int heart_idx[HEART_ANIM_SIZE] = { 0, 1, 2, 3, 2, 1 };
-int acc_bar_idx[8] = { 0, 0, 3, 1, 1, 3, 2, 2 };
-
-unsigned int resin = 0, frame_count = 0, anim_index = 0;
-
-
 // Core logic
+unsigned int mode = 0, resin = 0, hearts_idx = 0;
+bool last_b1 = false, last_b2 = false;
+bool l1 = false, l2 = false lstat = false, lext = false;
 
-unsigned long frame_time;
-
-float read_sensor(int index)
-{
-    int raw = 0;
-    for(int i=0; i<SENSOR_SAMPLES; i++) 
-    {
-        raw += analogRead(sensor_idx[index]);
-    }
-    return ((float)map(raw / SENSOR_SAMPLES, sensor_min[index], sensor_max[index], -1000, 1000)) / 1000.f;
-}
-
-byte sensor_to_display(float value)
-{
-    int acc = round(((value + 1.0f) / 2.0f) * 8.0f);
-    return (byte)((1 << acc) - 1);
-}
 
 void setup() 
 {
@@ -82,24 +55,53 @@ void setup()
 
 void loop() 
 {
-    frame_time = millis();
-
-    // Read sensor
-    byte acc[] = {
-        sensor_to_display(read_sensor(0)),
-        sensor_to_display(read_sensor(1)),
-        sensor_to_display(read_sensor(2)),
-        0
-    };
-
     // Read buttons
-    bool btn[] = {
-        digitalRead(BTN_1) == LOW,
-        digitalRead(BTN_2) == LOW
-    };
+    bool b1 = digitalRead(BTN_1) == LOW;
+    bool b2 = digitalRead(BTN_2) == LOW;
+
+    if(b1 && !last_b1)
+    {
+        mode += 1;
+        mode = mode % 6;
+    }
+    last_b1 = b1;
+
+    if(b2 && !last_b2)
+    {
+        if(mode == 0)
+        {
+            resin += 1;
+            resin = resin % 100;
+        }
+        else if(mode == 1)
+        {
+            hearts_idx += 1;
+            hearts_idx = hearts_idx % (HEARTS_FRAMES * 3);
+        }
+        else if(mode == 2)
+        {
+            l1 = !l1;
+            digitalWrite(LED_S1, l1);
+        }
+        else if(mode == 3)
+        {
+            l2 = !l2;
+            digitalWrite(LED_S2, l1);
+        }
+        else if(mode == 4)
+        {
+            lstat = !lstat;
+            digitalWrite(LED_CE, lstat);
+        }
+        else if(mode == 5)
+        {
+            lext = !lext;
+            digitalWrite(LED_EX, lext);
+        }
+    }
+    last_b2 = b2;
 
     // Draw LCD image
-    resin = frame_count / 10;
     u8g2.clearBuffer();
     u8g2.drawXBMP(ball_left, ball_top, ball_width, ball_height, ball_bits);
     if(resin > 9) u8g2.drawGlyph((LCD_WIDTH / 2) - 2, LCD_HEIGHT - FONT_OFFSET_Y, (resin / 10) + '0');
@@ -107,26 +109,29 @@ void loop()
     u8g2.drawGlyph(LCD_WIDTH - FONT_WIDTH, LCD_HEIGHT - FONT_OFFSET_Y, (resin % 10) + '0');
     u8g2.sendBuffer();
 
-   
+    // Draw hearts
     for(int k=0; k<8; k++) 
     {
-        // Render heart animation
-        lc.setRow(0, k, heart[heart_idx[frame_count % HEART_ANIM_SIZE]][k]);
-        // Display sensor values
-        lc.setRow(1, k, acc[acc_bar_idx[k]]);
-        // Display button state
-        lc.setRow(2, k, (btn[k<4? 0:1])? 0:255);
+        lc.setRow(0, k, heart[heart_idx[max(HEARTS_FRAMES - 1, hearts_idx)]][k]);
+        if(hearts_idx > HEARTS_FRAMES - 1)
+        {
+            lc.setRow(1, k, heart[heart_idx[hearts_idx - HEARTS_FRAMES]][k]);
+            if(hearts_idx > (HEARTS_FRAMES * 2) - 1)
+            {
+                lc.setRow(1, k, heart[heart_idx[hearts_idx - (HEARTS_FRAMES * 2)]][k]);
+            }
+            else
+            {
+                lc.setRow(2, k, heart[heart_idx[0]][k]);
+            }
+        }
+        else
+        {
+            lc.setRow(1, k, heart[heart_idx[0]][k]);
+            lc.setRow(2, k, heart[heart_idx[0]][k]);
+        }
     }
 
-    // Blink LEDs for testing
-    digitalWrite(LED_S1, frame_count % 6 == 0? HIGH:LOW);
-    digitalWrite(LED_S2, frame_count % 9 == 0? HIGH:LOW);
-    digitalWrite(LED_CE, frame_count % 12 == 0? HIGH:LOW);
-    digitalWrite(LED_EX, frame_count % 15 == 0? HIGH:LOW);
-
-    frame_count++;
-    if(frame_count > 600) frame_count = 0; 
-    
-    // Clamp frame time
+    // Debounce
     delay(20);
 }
