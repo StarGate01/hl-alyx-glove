@@ -69,12 +69,18 @@ Check out the [images](https://github.com/StarGate01/hl-alyx-glove/tree/master/i
 </details>
 
 <details>
-  <summary>Firmware Revision 2: Proper functionality - In Progress</summary>
+  <summary>Firmware Revision 2: Demo mode - Completed</summary>
+
+  - [x] State management w/ buttons
+  - [x] LED control
+  - [x] Adjustable amount of hearts and resin
+
+</details>
+
+<details>
+  <summary>Firmware Revision 3: Proper functionality - In Progress</summary>
 
   - [ ] Wrist flick detection
-  - [ ] State management w/ buttons
-  - [x] Aux LED control
-  - [ ] Adjustable amount of hearts
 
 </details>
 

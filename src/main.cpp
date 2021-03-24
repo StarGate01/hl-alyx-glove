@@ -11,7 +11,7 @@
 // Various parameters
 #define FRAME_TIME 100
 #define LEDMAT_NUM 3
-#define LEDMAT_BRIGHTNESS 4
+#define LEDMAT_BRIGHTNESS 3
 #define HEARTS_FRAMES 4
 
 // Display drivers
@@ -19,9 +19,10 @@ LedControl lc(LED_DIN, LED_CLK, LED_CS, LEDMAT_NUM);
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0);
 
 // Core logic
-unsigned int mode = 0, resin = 0, hearts_idx = 0;
+unsigned int mode = 0, resin = 0;
+unsigned int hearts_idx[3] = { 0, 0, 0 };
 bool last_b1 = false, last_b2 = false;
-bool l1 = false, l2 = false lstat = false, lext = false;
+bool l1 = false, l2 = false, lstat = false, lext = false;
 
 
 void setup() 
@@ -59,24 +60,41 @@ void loop()
     bool b1 = digitalRead(BTN_1) == LOW;
     bool b2 = digitalRead(BTN_2) == LOW;
 
+    // Mode button
     if(b1 && !last_b1)
     {
-        mode += 1;
+        mode++;
         mode = mode % 6;
     }
     last_b1 = b1;
 
+    // Change button
     if(b2 && !last_b2)
     {
         if(mode == 0)
         {
-            resin += 1;
+            resin++;
             resin = resin % 100;
         }
         else if(mode == 1)
         {
-            hearts_idx += 1;
-            hearts_idx = hearts_idx % (HEARTS_FRAMES * 3);
+            hearts_idx[0]++;
+            if(hearts_idx[0] > HEARTS_FRAMES - 1)
+            {
+                hearts_idx[0]--;
+                hearts_idx[1]++;
+                if(hearts_idx[1] > HEARTS_FRAMES - 1)
+                {
+                    hearts_idx[1]--;
+                    hearts_idx[2]++;
+                    if(hearts_idx[2] > HEARTS_FRAMES - 1)
+                    {
+                        hearts_idx[0] = 0;
+                        hearts_idx[1] = 0;
+                        hearts_idx[2] = 0;
+                    }
+                }
+            }
         }
         else if(mode == 2)
         {
@@ -86,7 +104,7 @@ void loop()
         else if(mode == 3)
         {
             l2 = !l2;
-            digitalWrite(LED_S2, l1);
+            digitalWrite(LED_S2, l2);
         }
         else if(mode == 4)
         {
@@ -112,23 +130,9 @@ void loop()
     // Draw hearts
     for(int k=0; k<8; k++) 
     {
-        lc.setRow(0, k, heart[heart_idx[max(HEARTS_FRAMES - 1, hearts_idx)]][k]);
-        if(hearts_idx > HEARTS_FRAMES - 1)
+        for(int i=0; i<3; i++)
         {
-            lc.setRow(1, k, heart[heart_idx[hearts_idx - HEARTS_FRAMES]][k]);
-            if(hearts_idx > (HEARTS_FRAMES * 2) - 1)
-            {
-                lc.setRow(1, k, heart[heart_idx[hearts_idx - (HEARTS_FRAMES * 2)]][k]);
-            }
-            else
-            {
-                lc.setRow(2, k, heart[heart_idx[0]][k]);
-            }
-        }
-        else
-        {
-            lc.setRow(1, k, heart[heart_idx[0]][k]);
-            lc.setRow(2, k, heart[heart_idx[0]][k]);
+            lc.setRow(i, k, heart[hearts_idx[i]][k]);
         }
     }
 
