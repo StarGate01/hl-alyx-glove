@@ -136,6 +136,14 @@ void loop()
         }
     }
 
+    // Test the accelerometer
+    // int x = max(0, min(255, (analogRead(ACC_X) * 3) / 128));
+    // int y = max(0, min(255, (analogRead(ACC_Y) * 3) / 128));
+    // int z = max(0, min(255, (analogRead(ACC_Z) * 3) / 128));
+    // lc.setRow(0, 0, x);
+    // lc.setRow(0, 1, y);
+    // lc.setRow(0, 2, z);
+
     // Debounce
     delay(20);
 }

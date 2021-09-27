@@ -189,6 +189,10 @@ The "Check engine light" is a 3D printed frame with a piece of printed overhead 
 
 I used various M3 bolts and nuts, and some epoxy glue for the rest of the assembly. The whole assembly is attached to the glove without modifying the glove, instead relying on the two plastic hooks. Use some white zip-ties and some black spiral cable wrap to complete the look.
 
+## Using the PCB
+
+Press the button `SW1` to cycle through the effects, and `SW2` to change / cycle the selected effect. The selection order is: LED hearts amount (initial state) - Green status LED D1 - Green status LED D2 - Red "Check engine" LED D3 - Orange attractor LEDs L1 and L2 - LCD resin count.
+
 ## Licensing
 
 All files in this repository are released under the terms of the MIT license. However the original idea and in-game design of the Half-Life: Alyx Glove was made by Valve Software. The copyright of the in-game design is of course held by Valve Software. The files in this repository however are a derivative / transformative work made by the author, and their copyright remains with the author.
